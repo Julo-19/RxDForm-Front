@@ -29,7 +29,7 @@ const DynamicForm = () => {
         return (
           <div>
             <label>
-              Champ 1:
+              Q1:
               <input
                 type="text"
                 value={formFields.field1}
@@ -49,7 +49,7 @@ const DynamicForm = () => {
         return (
           <div>
             <label>
-              Champ 2:
+              Q2:
               <input
                 type="text"
                 value={formFields.field2}
@@ -69,7 +69,7 @@ const DynamicForm = () => {
         return (
           <div>
             <label>
-              Champ 3:
+              Q1:
               <input
                 type="text"
                 value={formFields.field3}
@@ -114,7 +114,7 @@ const DynamicForm = () => {
       <ul>
         {[1, 2, 3].map((index) => (
           <li key={index}>
-            Exemple {index} :
+            Reponse {index} :
             <input
               type="text"
               value={formFields[`Exemple ${index}`] || ''}
