@@ -1,35 +1,46 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import user_icon from './assets/person.png'
+import email_icon from './assets/mail.png'
+import password_icon from './assets/password.png'
+
+const App = () => {
+
+  const [action,setAction] = useState("Login");
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='container'>
+      <div className="header">
+        <div className="text">{action}</div>
+          <div className="underline"></div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="inputs">
+        {action==="Login"?<div></div>:<div className="input">
+          <img src={user_icon} alt="" width={25} />
+          <input type="text" placeholder="Name"/>
+        </div>}
+        
+        <div className="input">
+          <img src={email_icon} alt="" width={25} />
+          <input type="email" placeholder="Email"/>
+        </div>
+        <div className="input">
+          <img src={password_icon} alt="" width={25} />
+          <input type="password" placeholder="Password" />
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      {action==="Sign Up"?<div></div>:<div className="forgot-password">Lost Password? <span>Click here!</span></div>}
+      <div className="submit-container">
+        <div className={action==="Login"?"submit gray":"submit"} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
+        <div className={action==="Sign Up"?"submit gray":"submit"} onClick={()=>{setAction("Login")}}>Login</div>
+      </div>
 
-export default App
+    </div>
+  );
+};
+
+
+export default App;

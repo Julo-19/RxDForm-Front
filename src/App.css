@@ -1,42 +1,98 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.container{
+  display: flex;
+  flex-direction: column;
+  /* margin: 500px;
+  margin-top: 500px; */
+  width: 340px;
+  background: #fff;
+  padding-bottom: 30px;
+  border-radius: 15px;
+  margin-left: 500px;
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  width: 80%;
+  margin-top: 30px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text{
+  color: #038a81;
+  font-size: 48px;
+  font-weight: 700;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.underline{
+  width: 61px;
+  height: 6px;
+  background: #038a81;
+  border-radius: 9px;
 }
 
-.card {
-  padding: 2em;
+.inputs{
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.read-the-docs {
-  color: #888;
+.input{
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 280px;
+  height: 40px;
+  background: #eaeaea;
+  border-radius: 6px;
+}
+
+.input img{
+  margin: 0px 30px;
+}
+
+.input input{
+  height: 50px;
+  width: 400px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #797979;
+  font-size: 19px;
+}
+
+.forgot-password{
+  padding-left: 62px;
+  margin-top: 27px;
+  color: #797979;
+  font-size: 18px;
+}
+
+.forgot-password span{
+  color: #038a81;
+  cursor: pointer;
+}
+
+.submit-container{
+  display: flex;
+  gap: 30px;
+  margin: 40px auto;
+}
+
+.submit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 39px;
+  color: #fff;
+  background: #038a81;
+  border-radius: 50px;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
 }
